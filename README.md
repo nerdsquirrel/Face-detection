@@ -1,2 +1,21 @@
-# Face-detection
-Integriting Face-API from Microsoft cognitive services in Asp.net MVC project
+
+## what will be the output of the following code:
+```javascript
+(function() {
+
+  console.log('this is the start');
+
+  setTimeout(function cb() {
+    console.log('this is a msg from call back');
+  });
+
+  console.log('this is just a message');
+
+  setTimeout(function cb1() {
+    console.log('this is a msg from call back1');
+  }, 0);
+
+  console.log('this is the end');
+
+})();
+```
