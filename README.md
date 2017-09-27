@@ -1,21 +1,37 @@
 
 ## what will be the output of the following code:
-```javascript
-(function() {
+```csharp
+class Parent
+{
+    public virtual void Print()
+    {
+        Console.WriteLine("Parent");
+    }
+}
 
-  console.log('this is the start');
+class ChildOne : Parent
+{
+    public new virtual void Print()
+    {
+        Console.WriteLine("ChildOne");
+    }
+}
 
-  setTimeout(function cb() {
-    console.log('this is a msg from call back');
-  });
+class ChildTwo : ChildOne
+{
+    public override void Print()
+    {
+        Console.WriteLine("ChildTwo");
+    }
+}
 
-  console.log('this is just a message');
-
-  setTimeout(function cb1() {
-    console.log('this is a msg from call back1');
-  }, 0);
-
-  console.log('this is the end');
-
-})();
+static void Main(string[] args)
+{
+    Parent p = new ChildTwo();
+    p.Print();    
+    
+    ChildOne ch1 = new ChildTwo();
+    ch1.Print();
+}
 ```
+
